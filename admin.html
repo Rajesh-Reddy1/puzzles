@@ -1,86 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Admin</title>
-    
-
+    <title>Display User Data</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
 </head>
 
-<style>
-    table,
-    td,
-    th,
-    tr {
-        border: 1px solid;
-        padding: 10px 5px;
-    }
+<body>
+    <h1>User Data</h1>
+    <p>Email: <span id="user-email"></span></p>
 
-    tr:hover {
-        background-color: #d2278b;
-    }
+    <p>full_name: <span id="user-full"></span></p>
+    <p>last-login: <span id="user-log"></span></p>
+    <script>
+        // Set the configuration for your app
+        // TODO: Replace with your project's config object
+        var config = {
+            apiKey: "AIzaSyA3mex7VwTyQCR-m5BF0vPVAsT8ltEih08",
+            authDomain: "login-signup-bf2b0.firebaseapp.com",
+            projectId: "login-signup-bf2b0",
+            storageBucket: "login-signup-bf2b0.appspot.com",
+            messagingSenderId: "28483952329",
+            appId: "1:28483952329:web:61c6688162e21180e73718",
+            databaseURL: "https://login-signup-bf2b0-default-rtdb.firebaseio.com"
+        };
+        firebase.initializeApp(config);
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        text-align: center;
-    }
-</style>
 
-<style>
-    .heading {
-        display: flex;
-    }
 
-    .heading h1 {
-        flex-grow: 1;
-    }
+        // Get the uid of the user you want to retrieve data for
+        var database = firebase.database();
 
-    .heading button {
-        margin-top: 25px;
-    }
+        // Get a reference to the users node in the database
+        var usersRef = database.ref("users");
+        console.log(usersRef)
+        // Attach a listener to read the data at our users reference
+        usersRef.on('value', function (snapshot) {
+            // Get the user data from the snapshot
+            var userData = snapshot.val();
 
-    .heading a:link,
-    a:active,
-    a:visited,
-    a:hover {
-        text-decoration: none;
-    }
-</style>
+            // Display the user data on the page
+            console.log('User data:', userData);
+            document.getElementById('user-email').textContent = userData.email;
+            document.getElementById('user-full').textContent = userData.full_name;
+            document.getElementById('user-log').textContent = userData.last_login;
+        });
+        
 
-<body style="padding: 1% 5%">
-    <div class="heading">
-        <h1 align="center" style="color: #3f2f2f">Soft Skills Hunt</h1>
-        <button style="background-color: #ee4646; padding: 5px 10px; border-radius: 5px;"><a
-                href="/logout">Logout</a></button>
-    </div>
-    <p align="center"><strong>Details of participants and their analysis are here below</strong></p>
-    <table>
-        <thead style="background-color: #ff9999">
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone Number</th>
-                <th>Age</th>
-                <th>Time Taken</th>
-                <th>Score</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for record in records %}
-            <tr>
-                <td>{{record[1]}}</td>
-                <td>{{record[2]}}</td>
-                <td>{{record[3]}}</td>
-                <td>{{record[4]}}</td>
-                <td>{{record[8][0]}} Hours, {{record[8][1]}} Minutes, {{record[8][2]}} Seconds</td>
-                <td>{{record[7]}}</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
 
+    </script>
 </body>
 
 </html>
