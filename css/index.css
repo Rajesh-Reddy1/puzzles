@@ -1,0 +1,173 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(92, 242, 214);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+#content_container {
+    width: 30%;
+    height: 70%;
+}
+
+#form_container {
+    width: 80%;
+    height: 60%;
+
+    background-color: #ffffff;
+    box-shadow: 0 0 50px -20px rgb(241, 107, 107);
+    border-radius: 2%;
+
+    overflow: hidden;
+}
+
+#form_header_container {
+    width: 100%;
+    height: 5%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+
+    padding: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+
+    border-bottom: 1px solid transparent;
+    border-image: -webkit-linear-gradient(25deg, #f3f2ef, #ffffff, #e4d9de, #ffffff, #ffffff) 20;
+    background: #000;
+}
+
+#form_header {
+    display: inline-block;
+    font-size: 15px;
+    font-family: Bowlby One SC;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+
+    background: -webkit-linear-gradient(25deg, #fefaee, #ffffff, #f1e2e8, #e4e0eb, #e6e9ee);
+    background-clip: text;
+    -webkit-text-fill-color: none;
+}
+
+#form_content_container {
+    width: 100%;
+    height: 90%;
+
+    float: left;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-top: 30px;
+}
+
+#form_content_inner_container {
+    width: 75%;
+    height: 100%;
+
+    float: left;
+
+}
+
+input {
+    width: 100%;
+    height: 40px;
+
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+    background: rgb(236, 233, 233);
+    font-family: Montserrat;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
+    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 1;
+}
+
+#button_container {
+    width: 100%;
+    height: 10%;
+
+    background-image: linear-gradient(80deg, #FFBE0B, #FB5607 50%, #FF006E 50%, #8338EC);
+    color: rgb(5, 2, 2);
+
+    float: left;
+
+    margin-top: 5px;
+}
+a{
+    color : rgb(0, 0, 0);
+}
+.fancy_button {
+    width: 100%;
+    height: 2.4rem;
+    
+    background-color: black;
+    color: rgb(238, 158, 31);
+    
+    font-family: Montserrat;
+    letter-spacing: 1px;
+    font-weight: 900;
+    font-size: 16px;
+    
+    cursor: pointer;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*  Logic Css  */
+
+
+h1 {
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Add styles for the challenge container */
+#challenge-container {
+    margin: 20px;
+}
+
+/* Add styles for challenge images */
+#challenge-container img {
+    max-width: 100%;
+}
+
+/* Add styles for the next button */
+#next-button {
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+

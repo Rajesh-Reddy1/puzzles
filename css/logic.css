@@ -1,0 +1,123 @@
+body {
+    background-color: rgb(233, 189, 92);
+    background-size: cover;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Add styles for the h1 element */
+h1 {
+    background-color: rgb(13, 9, 9);
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+f {
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+#qqq {
+    
+        background-color: #04AA6D;
+        color: white;
+        padding: 10px 20px;
+        margin: 20px auto;
+        border: none;
+        cursor: pointer;
+        width: 10%;
+        display: block;
+
+
+}
+#qqq:hover {
+    opacity: 0.8;
+}
+
+a {
+    font-size: x-large;
+    color: rgb(4, 1, 1);
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    border: none;
+
+}
+
+p {
+    background-position: 0;
+    font-size: large;
+    color: rgb(4, 1, 1);
+    margin: 20;
+    padding: 20px;
+    text-align: right;
+}
+
+/* Add styles for the challenge container */
+#challenge-container {
+    margin: 20px;
+}
+
+/* Add styles for challenge images */
+#challenge-container img {
+    max-width: 100%;
+}
+
+/* Add styles for the next button */
+#next-button {
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+
+#prev-button {
+    background-color: #333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    margin: 20px auto;
+    padding: 10px 20px;
+}
+
+input {
+    width: 30%;
+    height: 30px;
+
+    padding-left: 10px;
+    margin-bottom: 20px;
+
+    background: rgb(236, 233, 233);
+    font-family: Montserrat;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    font-size: 25px;
+    text-align: center;
+
+    border-bottom: 2px solid transparent;
+    border-top-left-radius: 8%;
+    border-top-right-radius: 2%;
+    border-image: -webkit-linear-gradient(25deg, #FFBE0B, #FB5607, #FF006E, #8338EC, #3A86FF) 1;
+}
