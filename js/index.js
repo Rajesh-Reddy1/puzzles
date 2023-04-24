@@ -99,7 +99,7 @@ function login() {
             // logic.nextButton.addEventListener("click", onNextButtonClick);
             // logic.showChallenge();
             console.log("done");
-            window.location.href="logic.html";
+            window.location.href="./puzzles/logic.html";
             
 
         })
